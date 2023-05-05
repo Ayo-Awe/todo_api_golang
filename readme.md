@@ -135,11 +135,11 @@ This is a simple Golang CRUD API built with Fiber and GORM. The API allows you t
 
 ## 🛠️ Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
-2. Navigate to the project directory: `cd your-repo`
+1. Clone the repository: `git clone https://github.com/Ayo-Awe/todo_api_golang.git`
+2. Navigate to the project directory: `todo_api_golang`
 3. Install the dependencies: `go get ./...`
 4. Set up the MySQL database and update the `.env` file with your database credentials. Depending on when you're reading this, there could be no .env file, you can edit the dsn in the database.go file
-5. Run the server: `go run server.go`
+5. Run the server: `go run app.go`
 
 ## 🛡️ Authentication
 
@@ -153,7 +153,7 @@ This API does not require authorization.
 
 This API uses the following dependencies:
 
-- [Fiber](https://github.com/gofiber/fiber) - Web framework for Golang
+- [Fiber](https://github.com/gofiber/fiber/) - Web framework for Golang
 - [GORM](https://gorm.io/) - ORM library for Golang
 - [MySQL](https://www.mysql.com/) - Open-source relational database management system
 
