@@ -11,6 +11,13 @@ import (
 	"github.com/joho/godotenv"
 )
 
+func baseHandler(c *fiber.Ctx) error {
+	return c.JSON(fiber.Map{
+		"message": "Welcome to my simple todo",
+		"status":  "success",
+	})
+}
+
 func main() {
 	godotenv.Load()
 	database.ConnectDB()
@@ -18,8 +25,9 @@ func main() {
 	app := fiber.New()
 	app.Use(cors.New())
 	api := app.Group("/api")
-	todos := api.Group("/todos")
+	api.Get("/", baseHandler)
 
+	todos := api.Group("/todos")
 	port, exists := os.LookupEnv("PORT")
 	if !exists {
 		port = "3000"
