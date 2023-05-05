@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"os"
 	"todo_api/database"
 	"todo_api/routes"
@@ -20,10 +21,10 @@ func main() {
 	todos := api.Group("/todos")
 
 	port, exists := os.LookupEnv("PORT")
-	if exists == false {
+	if !exists {
 		port = ":3000"
 	}
 
 	routes.TodoRouter(todos)
-	app.Listen(port)
+	log.Fatal(app.Listen(":" + port))
 }
