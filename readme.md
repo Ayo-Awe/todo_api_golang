@@ -159,11 +159,8 @@ This API uses the following dependencies:
 
 ## 🚀 Deployment
 
-To deploy this API, you can use any cloud provider that supports Golang and MySQL. Some popular options include:
-
-- [Google Cloud](https://cloud.google.com/)
-- [Amazon Web Services](https://aws.amazon.com/)
-- [Microsoft Azure](https://azure.microsoft.com/)
+This API is currently has a live deployment on [Render](https://render.com/).
+Here is the API base url `https://go-todo-api.onrender.com/api/`
 
 ## 🤝 Contributing
 
