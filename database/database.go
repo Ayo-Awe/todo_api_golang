@@ -1,6 +1,7 @@
 package database
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"todo_api/models"
@@ -14,7 +15,14 @@ var (
 )
 
 func ConnectDB() {
-	dsn := "user:pass@tcp(127.0.0.1:3306)/database?charset=utf8mb4&parseTime=True&loc=Local"
+	user := os.Getenv("DB_USER")
+	password := os.Getenv("DB_PASS")
+	port := os.Getenv("DB_PORT")
+	host := os.Getenv("DB_HOST")
+	database := os.Getenv("DB_NAME")
+
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
+		user, password, host, port, database)
 
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
