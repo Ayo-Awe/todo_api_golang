@@ -45,7 +45,7 @@ This is a simple Golang CRUD API built with Fiber and GORM. The API allows you t
   }
   ```
 
-- `POST /api/todos/:id` - Create a todo with a title and description<br>
+- `POST /api/todos` - Create a todo with a title and description<br>
   Example Request Body
 
   ```json
