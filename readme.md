@@ -159,8 +159,8 @@ This API uses the following dependencies:
 
 ## 🚀 Deployment
 
-This API is currently has a live deployment on [Render](https://render.com/).
-Here is the API base url `https://go-todo-api.onrender.com/api/`
+This API is currently has a live deployment on [Railway](https://railway.app/).
+Here is the API base url `https://golangtodo.up.railway.app/api/` or `todo.aweayo.tech/api`
 
 ## 🤝 Contributing
 
